@@ -45,6 +45,15 @@
             "team"
         ],
         "authentication" : true
+      },
+      "add_team_repo" : {
+        "path" : "/:format/teams/:team/repositories",
+        "method" : "POST",
+        "required_params" : [
+            "format",
+            "team"
+        ],
+        "authentication" : true
       }
    },
    "expected_status" : [ 200 ],
