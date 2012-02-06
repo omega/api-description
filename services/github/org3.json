@@ -2,11 +2,37 @@
    "base_url" : "https://api.github.com/",
    "version" : "0.1",
    "methods" : {
-      "get_organization_repositories" : {
+      "list_org_repos" : {
         "path" : "/orgs/:org/repos",
         "method" : "GET",
         "required_params" : [
             "org"
+        ],
+        "authentication" : true
+      },
+      "list_org_teams" : {
+        "path" : "/orgs/:org/teams",
+        "method" : "GET",
+        "required_params" : [
+            "org"
+        ],
+        "authentication" : true
+      },
+      "add_team_repo": {
+        "path": "/teams/:team/repos/:user/:repo",
+        "method": "PUT",
+        "required_params": [
+            "team",
+            "user",
+            "repo"
+        ],
+        "authentication" : true
+      },
+      "list_team_repos": {
+        "path": "/teams/:team/repos",
+        "method": "GET",
+        "required_params": [
+            "team"
         ],
         "authentication" : true
       }
