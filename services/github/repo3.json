@@ -1,0 +1,44 @@
+{
+    "base_url" : "https://github.com/",
+    "version" : "0.4",
+    "methods" : {
+        "list_repo_hooks": {
+            "path": "/repos/:user/:repo/hooks",
+            "method": "GET",
+            "required_params" : [
+                "user",
+                "repo"
+            ],
+            "authentication" : true
+        },
+        "update_repo_hook": {
+            "path": "/repos/:user/:repo/hooks/:id",
+            "method": "PATCH",
+            "required_params": [
+                "user",
+                "repo",
+                "id"
+            ],
+            "required_payload": true,
+            "authentication": true
+        },
+        "add_repo_hook": {
+            "path": "/repos/:user/:repo/hooks",
+            "method": "POST",
+            "required_params": [
+                "user",
+                "repo"
+            ],
+            "required_payload": true,
+            "authentication": true
+        }
+    },
+   "expected_status" : [ 200 ],
+   "name" : "GitHub v3",
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://develop.github.com/v3",
+      "module" : "repository"
+   }
+}
+

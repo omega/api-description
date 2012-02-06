@@ -1,0 +1,21 @@
+{
+   "base_url" : "https://api.github.com/",
+   "version" : "0.1",
+   "methods" : {
+      "get_organization_repositories" : {
+        "path" : "/orgs/:org/repos",
+        "method" : "GET",
+        "required_params" : [
+            "org"
+        ],
+        "authentication" : true
+      }
+   },
+   "expected_status" : [ 200 ],
+   "name" : "GitHub v3",
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://develop.github.com/",
+      "module" : "organization"
+   }
+}
