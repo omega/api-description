@@ -11,6 +11,29 @@
             ],
             "authentication" : true
         },
+        "get_repo_hook": {
+            "path": "/repos/:user/:repo/hooks/:id",
+            "method": "GET",
+            "required_params": [
+                "user",
+                "repo",
+                "id"
+            ],
+            "required_payload": false,
+            "authentication": true
+        },
+        "test_repo_hook": {
+            "path": "/repos/:user/:repo/hooks/:id/test",
+            "method": "POST",
+            "required_params": [
+                "user",
+                "repo",
+                "id"
+            ],
+            "required_payload": false,
+            "authentication": true,
+            "expected_status": [ 204 ]
+        },
         "update_repo_hook": {
             "path": "/repos/:user/:repo/hooks/:id",
             "method": "PATCH",
