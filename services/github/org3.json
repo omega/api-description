@@ -10,6 +10,15 @@
         ],
         "authentication" : true
       },
+      "add_org_repo": {
+        "path" : "/orgs/:org/repos",
+        "method": "POST",
+        "required_params" : [
+            "org"
+        ],
+        "payload_required": true,
+        "authentication" : true
+      },
       "list_org_teams" : {
         "path" : "/orgs/:org/teams",
         "method" : "GET",
