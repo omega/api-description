@@ -19,7 +19,7 @@
                 "repo",
                 "id"
             ],
-            "required_payload": false,
+            "payload_required": false,
             "authentication": true
         },
         "test_repo_hook": {
@@ -30,7 +30,7 @@
                 "repo",
                 "id"
             ],
-            "required_payload": false,
+            "payload_required": false,
             "authentication": true,
             "expected_status": [ 204 ]
         },
@@ -42,7 +42,7 @@
                 "repo",
                 "id"
             ],
-            "required_payload": true,
+            "payload_required": true,
             "authentication": true
         },
         "add_repo_hook": {
